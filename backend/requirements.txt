@@ -1,0 +1,31 @@
+# Backend dependencies
+# Pin minor versions for reproducibility; upgrade intentionally.
+
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# PDF parsing
+PyMuPDF==1.24.3
+
+# Embeddings & reranking (downloads models on first run)
+sentence-transformers==3.0.1
+torch==2.3.1          # CPU-only build is fine; GPU auto-detected if available
+
+# Vector DB client
+qdrant-client==1.9.1
+
+# LLM clients
+google-generativeai==0.7.2
+openai==1.30.5
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.7.1
+tqdm==4.66.4
+tiktoken==0.7.0       # token counting (OpenAI tokenizer, good enough for chunking)
+
+# Testing
+pytest==8.2.2
+httpx==0.27.0         # async test client for FastAPI
